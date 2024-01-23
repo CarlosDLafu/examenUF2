@@ -12,3 +12,26 @@ h1 {
 #ex1 > img {
     width: 100%;
 }
+
+#cotxe {
+
+    position: absolute;
+    width: 25%!important;
+    animation-name: AnimCarRuning;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    margin-top: 8em;
+    top: 30%;
+
+}
+
+@keyframes AnimCarRuning {
+
+    0% {right: -30%; opacity: 0;}
+    33% {right: -30%; opacity: 1;}
+    66% {right: 100%; opacity: 1;}
+    67% {opacity: 0; right: 100%;}
+    100% {opacity: 0; right: -30%;}
+
+}
