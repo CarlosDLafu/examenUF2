@@ -12,6 +12,32 @@
     <h2>Exercici 1</h2>
     <div id="ex1">Implementeu aquí l'exercici 1</div>
     <h2>Exercici 2</h2>
-    <div id="ex2">Implementeu aquí l'exercici 2</div>
+    <div id="ex2">
+        <a href="https://pixabay.com/es/sound-effects/laughing-man-117725/">Enllaç del audio amb la risa (no ho he escoltat)</a>
+        <p>Licencia de uso gratuito y distribución pero no comercializable</p>
+        <img id="pallaso" src="originals/pallasoCarlos.svg" alt="Imatge SVG del pallasso">
+    </div>
 </body>
+
+<script>
+    document.getElementById("pallaso").addEventListener("click", displayAudio);
+
+    function displayAudio(e) {
+
+        var cursorX = e.pageX;
+        var cursorY = e.pageY;
+
+        //var formula = Math.sqrt(Math.pow((cursorX-(242-166)), 2) + Math.pow((cursorY-(439-365)), 2));
+
+        if ((cursorX >= 166 && cursorX <= 242) && (cursorY >= 365 && cursorY <= 439)) {
+        //&& (formula <= 40 && formula >= 36)) {
+
+            var audio = new Audio('originals/media/laughing-man-117725.mp3');
+            audio.play();
+
+
+        }
+
+    }
+</script>
 </html>
